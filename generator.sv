@@ -10,12 +10,12 @@ endfunction
 /////////////////////////////////////////////
 ///generate signals and apply them to dut using interface
 task run();
-for (int i=0; i<5; i++) begin
+        for (int i=0; i<5; i++) begin
 if (!T.randomize()) 
     $display("T.randomization failed");
 else 
 begin
-    mbx.put(T);
+    mbx.put(T.copy());
     $display("generator: ");
     T.display();
     #5;

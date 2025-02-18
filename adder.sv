@@ -1,5 +1,5 @@
-module adder( input [7:0] a,b,
-output logic [8:0] c);
+module adder( input [3:0] a,b,
+output logic [4:0] c);
 
 // assign c =a+b;
 

@@ -1,6 +1,5 @@
 
 class driver;
-
 rand trans T;//earase the t 
 mailbox #(trans) mbx; //create a mailbox to hold transaction----declear 
 virtual adder_if aif;
@@ -19,8 +18,10 @@ forever
  begin
 
 mbx.get(T); // getting the transaction from the mailbox
-aif.a =T.a;
-aif.b=T.b;
+$display("driver :");
+T.display();
+aif.drv.a =T.a;
+aif.drv.b=T.b;
 #5;
 end
 
